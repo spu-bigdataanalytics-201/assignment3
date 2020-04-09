@@ -132,3 +132,6 @@ dmypy.json
 .DS_Store
 data/*
 !data/*.gitkeep
+
+# dask related
+dask-worker-space

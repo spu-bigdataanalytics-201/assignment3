@@ -4,17 +4,36 @@ import functools
 import pandas as pd
 
 
-DATA_DIR = 'data'
-
-
-def read_as_dataframe():
+def read_as_dataframe(num_of_files=5):
     """
     Read all files into one single dataframe.
-    PS: this should work, unfortunately, my computer is slow to load all into one. 
-    I didn't try this code, but if this works, you only need to loop for the rows.
+    
+    Notes:
+    This function will work only if you have a large amount of RAM
+    on your computer. For example, anything above 30 GB should work.
+
+    If you have less RAM, you can limit the number of files to load
+    with this function with the parameter.
+
+    For more information on this issue, check out the stackoverflow
+    answer: https://datascience.stackexchange.com/a/27794/61094.
+
+    Parameters:
+    num_of_files - How many files from the data folder you want to
+                   load to.
     """
-    par_func = functools.partial(pd.read_csv, compression='bz2', encoding='ISO-8859-1', memory_map=True)
-    file_list = glob.glob(os.path.join(DATA_DIR, '*.csv.bz2'))
-    df = pd.concat(map(par_func, file_list))
+    # partial function
+    par_func = functools.partial(
+        pd.read_csv, 
+        compression='bz2', 
+        engine='c', 
+        low_memory=True
+    )
+
+    # file path list
+    file_list = list(glob.glob('data/*.csv.bz2'))
+
+    # run partial function for all file paths and concat the dataframe
+    df = pd.concat(map(par_func, file_list[:num_of_files]))
 
     return df
