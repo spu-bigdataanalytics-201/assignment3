@@ -89,6 +89,16 @@ def read_as_dataframe_chunks(num_of_files=5, chunksize=500000):
     if num_of_files not in range(1, 23):
         raise Exception('Incorrect number of files.')
         
+    # another option for pd.read_csv is to use dtypes.
+    # by passing dtype to pandas, we will define the data type for the column.
+    # this is helpful, eliminates future data type confusions.
+    dtype= {
+        'CRSElapsedTime': 'float64',
+        'CancellationCode': 'object',
+        'TailNum': 'object',
+        'Distance': 'float64'
+    }
+
     # partial function
     par_func = functools.partial(
         pd.read_csv, 
