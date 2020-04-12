@@ -1,3 +1,15 @@
+"""
+Utility Functions
+-------------------------------
+Helper functions in general.
+
+Usage:
+import utils
+
+for number in utils.progressbar(range(100)):
+    result += number ** number
+"""
+
 import sys
 
 

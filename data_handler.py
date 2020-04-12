@@ -49,7 +49,8 @@ def read_as_dataframe(num_of_files=5):
     # partial function
     par_func = functools.partial(
         pd.read_csv, 
-        compression='bz2', 
+        compression='bz2',
+        encoding='ISO-8859-1',
         engine='c', 
         low_memory=True
     )
@@ -92,7 +93,9 @@ def read_as_dataframe_chunks(num_of_files=5, chunksize=500000):
     par_func = functools.partial(
         pd.read_csv, 
         compression='bz2', 
+        encoding='ISO-8859-1',
         engine='c',
+        low_memory=False,
         chunksize=chunksize
     )
 
