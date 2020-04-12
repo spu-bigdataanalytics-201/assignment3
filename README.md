@@ -6,7 +6,7 @@ This is your chance to make your hands dirty with map reduce algorithm.
 
 In this assignment you will work with a large dataset. We have a dataset of size 1.6 GB (compressed, and 12 GB when uncompressed), with the records of nearly 120 million records. Below, find a general overview about [the map-reduce algorithm and concepts](#introductory-knowledge-on-concepts) and some instructions to setup your assignment. Following this guide will be benefical for you to cope with the assignment.
 
-The goal of this assignment is to bring you face-to-face with problems and throubles in the case of a large dataset. The challanges of working a dataset that is larger than your computer RAM brings some serious problems that you may not able to solve, unless you use parallel programming, or big data algorithms. [MapReduce](https://research.google/pubs/pub62/) is one of those algorithms to help you overcome problems.
+The goal of this assignment is to bring you face-to-face with problems and troubles in the case of a large dataset. The challanges of working a dataset that is larger than your computer RAM brings some serious problems that you may not able to solve, unless you use parallel programming, or big data algorithms. [MapReduce](https://research.google/pubs/pub62/) is one of those algorithms to help you overcome problems.
 
 ## Introductory Knowledge on Concepts
 
@@ -28,7 +28,7 @@ You can find more information about this dataset in the website of [Statistical 
 
 The quest is very simple:
 
-> Find the # of flights each airline made so far, for the period of 1989 to 2008.
+> Find the # of flights each airline made so far, for the period of 1987 to 2008.
 
 The problem we are trying to solve is very simple, however, with an iterative approach, it may be hard to find the solution because of that size of the dataset.
 
@@ -42,7 +42,7 @@ Following is the list of your, tasks.
 
 Follow below instructions to set up your assignment repository.
 
-- [ ] Download images from [My Google Drive](https://drive.google.com/open?id=1145wIkSlzA61CdHS4hZZFgF6ZzIbaVJM).
+- [ ] Download images from [My Google Drive](https://drive.google.com/open?id=1145wIkSlzA61CdHS4hZZFgF6ZzIbaVJM). (Only SPU emails are allowed to download.)
 - [ ] Create a folder named as `data` in this directory. Put the data files in this folder.
 - [ ] Run `Assignment3.ipynb`.
 - [ ] Load the entire dataset into a DataFrame.
