@@ -64,6 +64,9 @@ Reduce is the action of reducing the sorted values into a value using the requir
 
 As a result, all <key, sorted(value)> pairs are returned back to <key, value> pairs with performed calculation.
 
+<sup><sub>Images are from [an article at JournalDev](https://www.journaldev.com/8848/mapreduce-algorithm-example).</sup></sub>
+<sup><sub>MapReduce introductory is from [Ravi Sharma's answer at Quora](https://www.quora.com/What-is-Map-Reduce/answer/Ravi-Sharma-3187/).</sup></sub>
+
 ### About the Dataset
 
 The data consists of flight arrival and departure details for all commercial flights within the USA, from October 1987 to April 2008.
