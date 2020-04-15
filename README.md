@@ -1,5 +1,7 @@
 # Assignment3 - Introduction to MapReduce Algorithm
 
+![carbon](assets/carbon.png)
+
 Welcome!
 
 This is your chance to make your hands dirty with map reduce algorithm.
